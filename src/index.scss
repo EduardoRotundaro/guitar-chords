@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Secular+One&display=swap');
+
+$black: #222;
+
+* {
+    box-sizing:border-box;
+    font-family: 'Secular One', sans-serif;
+}
+
+html {
+    font-size:16px;
+}
+
+.diagram-wrap {
+    float:left;
+    width:330px;
+    padding-top: 20px;
+    min-width: 330px;
+    background: #27ae60 !important;
+}
+
+.diagram {
+    .d-row {
+        clear:both;
+        &.first {
+            .fret {
+                border-top:1px solid $black;
+            }
+        }
+        &.last {
+            .fret, .label {
+                border:0;
+                height: 20px;
+            }
+        }
+    }
+    .cell {
+        float:left;
+        position:relative;
+        width:76px;
+        height:32px;
+        &.fret {
+            border:1px solid $black;
+            border-top:0;
+            &:not(:last-of-type) {
+                border-right:0;
+            }
+        }
+        &.label {
+            width:20px;
+        }
+        &.index{
+            border: none;
+            text-align: center;
+            height: 25px;
+        }
+        .note {
+            position:absolute;
+            z-index:2;
+            width:26px;
+            height: 40px;
+            left:50%;
+            margin-left:-13px;
+            margin-top:-13px;
+            background:$black;
+            text-align:center;
+            border-radius: 0%;
+            &.openstring {
+                background:none;
+                color:$black;
+            }
+            &.openstring {
+                font-weight:bold;
+                top: -5%;
+            }
+            &:not(.capo){
+                padding-top:4px;
+                height:26px;
+                border-radius:50%;
+            }
+            &.capo-up {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+            &.capo-down {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                height: 26px;
+            }
+        }
+    }
+}
