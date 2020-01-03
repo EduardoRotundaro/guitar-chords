@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Diagram from './Diagram';
+import Diagram from './components/chords/G';
 
 export default props => (
     <div className="container-fluid">

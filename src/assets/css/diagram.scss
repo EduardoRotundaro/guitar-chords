@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Secular+One&display=swap');
-
 $black: #222;
-
-* {
-    box-sizing:border-box;
-    font-family: 'Secular One', sans-serif;
-}
-
-html {
-    font-size:16px;
-}
 
 .diagram-wrap {
     float:left;
@@ -71,7 +60,7 @@ html {
             }
             &.openstring {
                 font-weight:bold;
-                top: -5%;
+                top: -10%;
             }
             &:not(.capo){
                 padding-top:4px;
@@ -86,6 +75,9 @@ html {
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
                 height: 26px;
+            }
+            &.bug{
+                margin-left: -12px;
             }
         }
     }
